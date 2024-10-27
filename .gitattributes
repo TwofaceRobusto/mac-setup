@@ -1,0 +1,25 @@
+## Line Endings
+# automatically normalize line endings
+* text=auto
+
+# Windows scripts should use crlf line endings
+*.{cmd,[cC][mM][dD]} text eol=crlf
+*.{bat,[bB][aA][tT]} text eol=crlf
+
+# Linux/macOs/Unix shell scripts should use lf line endings
+*.sh text eol=lf
+
+## Binary Files
+# image files
+*.png binary
+*.jpg binary
+# document files
+*.pdf binary
+*.pages binary
+*.numbers binary
+*.keynote binary
+*.doc binary
+*.docx binary
+*.xls binary
+*.xlsx binary
+
