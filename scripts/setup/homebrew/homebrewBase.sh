@@ -18,6 +18,7 @@ FORMULAE=(
     'podman'
     'qrencode'
     'shellcheck'
+    'tree'
     'typst'
 )
 CASKS=(
