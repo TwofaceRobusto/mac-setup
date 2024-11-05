@@ -7,16 +7,13 @@ source scripts/scriptbase.sh
 
 SUBDIRECTORY="."
 
-OK=$(writeGreen OK)
-NOK=$(writeRed NOK)
-
-echo "Checking executable flag for .sh scripts"
+echoHeading "Checking executable flag for .sh scripts"
 for file in $(find $SUBDIRECTORY -type f -name "*.sh" ); do
     if [[ -x ${file} ]]; then
-        echo "$(pad "* ${file} executable:" -80)${OK}"
+        echo "$(pad "${file} executable:" -80)$(writeGreen OK)"
     else
-        echo "$(pad "* ${file} executable:" -80)${NOK}"
-        echo " - changing permissions for ${file} with chmod u+x"
+        echo "$(pad "${file} executable:" -80)$(writeRed NOK)"
+        echo " - changing permissions with chmod u+x"
         chmod u+x ${file}
     fi
 done
