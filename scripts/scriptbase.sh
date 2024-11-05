@@ -37,6 +37,24 @@ echoHeading(){
     echoYellow "*** $1 ***"
 }
 
+writeGreen(){
+    echo -n "${COLOUR_GREEN}$1${NOCOLOUR}"
+}
+
+writeRed(){
+    echo -n "${COLOUR_RED}$1${NOCOLOUR}"
+}
+
+## padding
+
+# padd a string
+# usage: pad <string> length
+# - length: positive=left pad, negative=right pad
+function pad () { 
+    [ "$#" -gt 1 ] && [ -n "$2" ] && printf "%$2.${2#-}s" "$1"; 
+}
+
+
 ## functions
 checkCommandInstalled(){
     if ! command -v $1 2>&1 >/dev/null

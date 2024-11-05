@@ -13,7 +13,9 @@ FORMULAE=(
     'bat'
     'btop'
     'coreutils'
+    'eza'
     'fastfetch'
+    'fzf'
     'lsd'
     'podman'
     'qrencode'
@@ -28,6 +30,11 @@ CASKS=(
     'devtoys'
     'podman-desktop'
 )
+
+FONTS=(
+    'font-jetbrains-mono-nerd-font'
+)
+
 
 brewInstallAllFormulae(){
     for EACH in $FORMULAE; do
@@ -45,10 +52,24 @@ brewInstallAllCasks(){
     done
 }
 
-echo "- Formulae"
+brewInstallAllFonts(){
+    for EACH in $FONTS; do
+        echo "installing ${EACH}"
+        brew install ${EACH}
+    done
+}
+
+
+######
+
+
+echoHeading "Installing Formulae"
 brewInstallAllFormulae
 
-#echo "- Casks"
+#echoHeading "- Casks"
 #brewInstallAllCasks
+
+echoHeading "Installing Fonts"
+brewInstallAllFonts
 
 popd
