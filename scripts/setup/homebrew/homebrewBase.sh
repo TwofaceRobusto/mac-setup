@@ -10,23 +10,28 @@ source ../../scriptbase.sh
 checkCommandInstalled brew
 
 FORMULAE=(
+    'asciidoctor'
     'bat'
     'btop'
     'coreutils'
     'eza'
     'fastfetch'
     'fzf'
+    'libxml2'
     'lsd'
+    'plantuml'
     'podman'
+    'pygments'
     'qrencode'
     'shellcheck'
+    'tlrc'
     'tree'
     'typst'
 )
 CASKS=(
     'quba'
     'iina'
-    'mediathekview'
+    'iterm2'
     'devtoys'
     'podman-desktop'
 )

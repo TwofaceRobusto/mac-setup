@@ -7,6 +7,8 @@ source ../scriptbase.sh
 
 checkCommandInstalled brew
 
+echoHeading "Running brew cleanup"
+brew cleanup
 echoHeading "Running brew update"
 brew update
 echoHeading "Running brew upgrade"
